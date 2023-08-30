@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+@font-face {
+    font-family: myAntonioFont;
+    src: url(/assets/fonts/Antonio-Regular.ttf);
+}
+
+:root {
+    --primaryColor: #070724;
+    --greyColor: #7F7F8D;
+}
+
+body {
+
+    background-color: var(--primaryColor);
+    background-image: url(/assets/images/background-stars.svg);
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+/* Planet Facts Word */
+h3 {
+
+    font-family: myAntonioFont;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+/* Navigation of Planets */
+ul {
+
+    display: flex;
+    list-style-type: none;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+ul li {
+    margin: auto 15px auto 0;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.content {
+    display: flex;
+    justify-content: end;
+    padding: 50px;
+}
+
+.planet {
+    /* Planet Image */
+    margin: auto auto auto auto;
+}
+
+section {
+    width: 400px;
+    margin-top: 10px;
+    margin-right: 90px;
+
+    height: 515px;
+}
+
+/* Planet Name */
+h1 {
+    font-family: myAntonioFont;
+    font-size: 80px;
+}
+
+/* Information about the planet */
+section p {
+    margin-top: 10px;
+    height: 25%;
+}
+
+#wikipedia-link {
+    margin: 50px 0 10px 0;
+    display: block;
+}
+
+/* Wikipedia word */
+#wikipedia-link span {
+    text-decoration: underline;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    justify-content: space-evenly;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 20px;
+    display: flex;
+}
+
+/* Number in button */
+button span {
+    margin-right: 20px;
+}
+
+button:hover {
+    background-color: #34344C;
+}
+
+
+/*  AFTER  SCROLLING     */
+
+
+/* Container */
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+
+/* Each Indivdual card */
+.cards div {
+    border: 1px solid white;
+    padding: 27px 20px 20px 20px;
+    width: 295px;
+}
+
+/* Card Headings */
+h4 {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* Days in a card */
+.cards div p {
+    font-size: 40px;
+    letter-spacing: -1.5px;
+    font-family: myAntonioFont;
+    font-weight: 700;
+}
+
+/* Grouping */
+button,
+section p,
+#wikipedia-link span,
+h4 {
+    line-height: 25px;
+}
+
+#wikipedia-link,
+#wikipedia-link span,
+button span,
+h4 {
+    columns: var(--greyColor);
+}
+
+/*Internal Structure Image */
+#geology {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -40%;
+    height: 196px;
+    width: 163px;
+    visibility: hidden;
+}
+
+.content>div {
+    display: flex;
+    flex-direction: column;
+    margin: auto auto auto auto;
+
+}

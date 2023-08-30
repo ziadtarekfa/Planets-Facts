@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Title Changes Dynamically -->
+    <title>Mercury</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header>
+        <h3>Planet Facts</h3>
+        <ul>
+            <li id="mercury">MERCURY</li>
+            <li id="venus">VENUS</li>
+            <li id="earth">EARTH</li>
+            <li id="mars">MARS</li>
+            <li id="jupiter">JUPITER</li>
+            <li id="saturn">SATURN</li>
+            <li id="uranus">URANUS</li>
+            <li id="neptune">NEPTUNE</li>
+        </ul>
+    </header>
+    <hr>
+    <div class="content">
+
+        <div>
+            <img class="planet" src="assets/images/planet-mercury.svg" alt="mercury photo">
+            <img id="geology" src="assets/images/geology-mercury.png">
+        </div>
+
+        <section>
+            <h1>Mercury</h1>
+            <p>Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the
+                Sun takes 87.97 Earth days, the shortest of all the Sun's planets. Mercury is one of four
+                terrestrial planets in the Solar System, and is a rocky body like Earth.</p>
+            <a id="wikipedia-link" href="https://en.wikipedia.org/wiki/Mercury_(planet)">Source :
+                <span>Wikipedia</span></a>
+            <div class="button-container">
+                <button id="overview_btn"><span>01</span> OVERVIEW</button>
+                <button id="structure_btn"><span>02</span>INTERNAL STRUCTURE</button>
+                <button id="geology_btn"><span>03</span>SURFACE GEOLOGY</button>
+            </div>
+        </section>
+    </div>
+    <div class="cards">
+
+        <div>
+            <h4>ROTATION TIME</h4>
+            <p id="rotation-time">58.6 Days</p>
+        </div>
+        <div>
+            <h4>REVOLUTION TIME</h4>
+            <p id="revolution-time">87.97 Days</p>
+        </div>
+        <div>
+            <h4>RADIUS</h4>
+            <p id="radius">2,439.7 KM</p>
+        </div>
+        <div>
+            <h4>AVERAGE TEMPERATURE</h4>
+            <p id="temperature">430°c</p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
