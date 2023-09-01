@@ -11,10 +11,20 @@
 
 <body>
     <header>
-        <div>
-            <h3>The PLANETS</h3>
-            <img class="menu-icon" src="assets/menu.svg" width="60px" />
-            <ul class="desktop-nav">
+
+
+
+        <h3>The PLANETS</h3>
+        <img class="menu-icon" src="assets/menu.svg" width="60px" onclick="toggleMenu()" />
+
+        <hr />
+        <ul class="planets-info">
+            <li>OVERVIEW</li>
+            <li>STRUCTURE</li>
+            <li>SURFACE</li>
+        </ul>
+        <nav>
+            <ul class="planets-nav">
                 <li id="mercury">MERCURY</li>
                 <li id="venus">VENUS</li>
                 <li id="earth">EARTH</li>
@@ -24,24 +34,7 @@
                 <li id="uranus">URANUS</li>
                 <li id="neptune">NEPTUNE</li>
             </ul>
-        </div>
-        <hr class="line" width="100%" />
-
-        <ul class="mobile-nav">
-            <li>OVERVIEW</li>
-            <li>STRUCTURE</li>
-            <li>SURFACE</li>
-        </ul>
-        <ul class="tablet-nav">
-            <li id="mercury">MERCURY</li>
-            <li id="venus">VENUS</li>
-            <li id="earth">EARTH</li>
-            <li id="mars">MARS</li>
-            <li id="jupiter">JUPITER</li>
-            <li id="saturn">SATURN</li>
-            <li id="uranus">URANUS</li>
-            <li id="neptune">NEPTUNE</li>
-        </ul>
+        </nav>
     </header>
     <hr>
     <div class="content">

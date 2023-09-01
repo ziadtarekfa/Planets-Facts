@@ -34,15 +34,78 @@ body {
 
 
 header {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding: 1rem 2rem;
+    /* flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
+
+}
+
+header .planets-info {
+    grid-column: 1/3;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+
+header hr {
+
+
+    grid-column: 1/3;
+    margin-inline: -2rem;
+    margin-top: 1rem;
+}
+
+hr {
+    border-color: #7F7F8D;
+}
+
+header .menu-icon {
+    width: 2rem;
+    justify-self: flex-end;
 
 }
 
 header h3 {
     font-size: 1.5rem;
+    grid-column: 1/2;
+}
+
+header nav {
+    position: absolute;
+    background-color: #070724;
+    left: 0;
+    right: 0;
+    top: -410px;
+    z-index: 1;
+    transition: all 0.2s ease-in-out;
+
+
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.open {
+    transform: translateY(450px);
+}
+
+header .planets-nav li {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+header .planets-nav li:hover {
+    display: inline-block;
+    background-color: red;
+
 }
 
 header div {
@@ -60,9 +123,6 @@ header div {
     padding: 1rem 2rem;
 }
 
-.menu-icon {
-    width: 2rem;
-}
 
 .content {
     display: flex;
@@ -137,9 +197,17 @@ section p {
     display: none;
 }
 
+.image-container {
+    position: relative;
+}
 
 #geology {
     display: none;
+    height: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 
@@ -147,8 +215,10 @@ section p {
 
     .line,
     .menu-icon,
-    .mobile-nav {
-        display: none;
+    .mobile-nav,
+    .planets-info,
+    header hr {
+        display: none !important;
     }
 
     .button-container,
@@ -156,16 +226,42 @@ section p {
         display: flex;
     }
 
+    header nav {
+        display: block;
+        grid-column: 1/3;
+        position: static;
+        background-color: transparent;
+    }
+
+    header .planets-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        row-gap: 2px;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    header .planets-nav li {
+        padding: 0;
+    }
+
     header div {
         justify-content: center;
     }
 
-    .tablet-nav {
+    header h3 {
+        grid-column: 1/3;
+        text-align: center;
+    }
+
+
+    /* .tablet-nav {
         width: 100%;
         justify-content: space-between;
-        padding: 0 3rem 2rem 3rem;
 
-    }
+
+    } */
 
     .tablet-nav li {
         color: var(--greyColor);
@@ -255,7 +351,33 @@ section p {
         display: none;
     }
 
-    .desktop-nav {
+    header h3 {
+        grid-column: 1/2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header nav {
+        grid-column: 2/3;
+    }
+
+    header .planets-nav {
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+
+    header .planets-nav li {
+        width: auto;
+
+    }
+
+    header .planets-nav li:hover {
+        /* background-color: transparent; */
+        background-color: initial;
+    }
+
+    /* .desktop-nav {
         display: flex;
         width: 30rem;
         justify-content: space-between;
@@ -263,12 +385,12 @@ section p {
 
     .desktop-nav li {
         font-size: 0.7rem;
-    }
+    } */
 
-    header div {
+    /* header div {
         justify-content: space-between;
         align-items: center;
-    }
+    } */
 
     .content {
         flex-direction: row;

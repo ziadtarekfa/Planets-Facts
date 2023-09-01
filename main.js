@@ -15,6 +15,10 @@ const getData = async () => {
 
 let planetindex = 0;
 
+const toggleMenu = () => {
+    const hazemhide = document.querySelector("header nav");
+    hazemhide.classList.toggle('open');
+}
 
 getData().then(data => {
 
@@ -26,21 +30,22 @@ getData().then(data => {
 
 
     overviewButton.style.backgroundColor = "#419EBB";
+    const planets = document.querySelector("nav ul")
 
-    const planetsDesktop = document.querySelector(".desktop-nav");
-    const planetsTablet = document.querySelector(".tablet-nav");
+    // const planetsDesktop = document.querySelector(".desktop-nav");
+    // const planetsTablet = document.querySelector(".tablet-nav");
 
-    let planets;
-    if (window.getComputedStyle(planetsDesktop).display == 'flex') {
-        planets = document.querySelectorAll(".desktop-nav li");
-    }
-    else if (window.getComputedStyle(planetsTablet).display == 'flex') {
-        planets = document.querySelectorAll(".tablet-nav li");
-    }
+    // let planets;
+    // if (window.getComputedStyle(planetsDesktop).display == 'flex') {
+    //     planets = document.querySelectorAll(".desktop-nav li");
+    // }
+    // else if (window.getComputedStyle(planetsTablet).display == 'flex') {
+    //     planets = document.querySelectorAll(".tablet-nav li");
+    // }
 
-    else {
-        planets = document.querySelectorAll(".mobile-nav li");
-    }
+    // else {
+    //     planets = document.querySelectorAll(".mobile-nav li");
+    // }
 
     for (let i = 0; i < planets.length; i++) {
 
@@ -109,7 +114,6 @@ function handleButtons(data) {
         geologyButton.style.backgroundColor = "#419EBB";
 
         geologyImage.setAttribute("src", data[planetindex].images.geology);
-        geologyImage.style.visibility = "visible";
 
         paragraph.textContent = data[planetindex].geology.content;
         link.setAttribute("href", data[planetindex].geology.source);
