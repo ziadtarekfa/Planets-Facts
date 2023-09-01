@@ -4,7 +4,7 @@
 //Should Stay Global
 const paragraph = document.querySelector("section p");
 const link = document.querySelector("#wikipedia-link");
-const planetImage = document.querySelector(".planet");
+const planetImage = document.querySelector("#planet-image");
 const geologyImage = document.querySelector("#geology")
 
 const overviewButton = document.querySelector('#overview_btn');

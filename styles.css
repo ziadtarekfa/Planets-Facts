@@ -1,13 +1,3 @@
-* {
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-}
-
 @font-face {
     font-family: myAntonioFont;
     src: url(/assets/fonts/Antonio-Regular.ttf);
@@ -16,6 +6,24 @@
 :root {
     --primaryColor: #070724;
     --greyColor: #7F7F8D;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li:hover,
+a:hover {
+    cursor: pointer;
 }
 
 body {
@@ -27,159 +35,304 @@ body {
 
 header {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    padding: 25px;
+    align-items: center;
+
 }
 
-/* Planet Facts Word */
-h3 {
-
-    font-family: myAntonioFont;
-    font-weight: 700;
-    font-size: 24px;
+header h3 {
+    font-size: 1.5rem;
 }
 
-/* Navigation of Planets */
-ul {
-
+header div {
     display: flex;
-    list-style-type: none;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem
 }
 
-li:hover {
-    cursor: pointer;
+.mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 2rem;
 }
 
-ul li {
-    margin: auto 15px auto 0;
-    font-size: 11px;
-    letter-spacing: 1px;
+.menu-icon {
+    width: 2rem;
 }
 
 .content {
     display: flex;
-    justify-content: end;
-    padding: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 5rem;
 }
 
-.planet {
-    /* Planet Image */
-    margin: auto auto auto auto;
-}
 
 section {
-    width: 400px;
-    margin-top: 10px;
-    margin-right: 90px;
-
-    height: 515px;
+    /* padding: 4rem 4rem 2rem; */
+    padding: 4rem 2rem 2rem 2rem;
 }
 
-/* Planet Name */
-h1 {
-    font-family: myAntonioFont;
-    font-size: 80px;
+section .planet-name {
+    font-size: 3rem;
 }
 
-/* Information about the planet */
 section p {
-    margin-top: 10px;
-    height: 25%;
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 25px;
+    color: var(--greyColor);
 }
 
-#wikipedia-link {
-    margin: 50px 0 10px 0;
-    display: block;
+.wikipedia-link {
+    margin-top: 1rem;
 }
 
-/* Wikipedia word */
-#wikipedia-link span {
-    text-decoration: underline;
+.wikipedia-link span {
+    color: grey;
 }
 
-.button-container {
-    display: flex;
-    flex-direction: column;
-    height: 50%;
-    justify-content: space-evenly;
+.wikipedia-link a {
+    color: var(--greyColor);
 }
 
-button {
-    background-color: transparent;
-    border: 1px solid white;
-    padding: 20px;
-    display: flex;
-}
-
-/* Number in button */
-button span {
-    margin-right: 20px;
-}
-
-button:hover {
-    background-color: #34344C;
-}
-
-
-/*  AFTER  SCROLLING     */
-
-
-/* Container */
 .cards {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    padding: 50px;
+    padding: 0 2rem 2rem;
 }
 
-/* Each Indivdual card */
 .cards div {
     border: 1px solid white;
-    padding: 27px 20px 20px 20px;
-    width: 295px;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
 }
 
-/* Card Headings */
-h4 {
-    font-size: 11px;
-    font-weight: 700;
+.cards h4 {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    color: var(--greyColor);
 }
 
-/* Days in a card */
+/* Days */
 .cards div p {
-    font-size: 40px;
-    letter-spacing: -1.5px;
+    font-size: 1.5rem;
     font-family: myAntonioFont;
-    font-weight: 700;
 }
 
-/* Grouping */
-button,
-section p,
-#wikipedia-link span,
-h4 {
-    line-height: 25px;
+.button-container,
+.tablet-nav,
+.desktop-nav {
+    display: none;
 }
 
-#wikipedia-link,
-#wikipedia-link span,
-button span,
-h4 {
-    columns: var(--greyColor);
-}
 
-/*Internal Structure Image */
 #geology {
     margin-left: auto;
     margin-right: auto;
     margin-top: -40%;
     height: 196px;
     width: 163px;
-    visibility: hidden;
+    display: none;
+    /* visibility: none; */
 }
 
-.content>div {
-    display: flex;
-    flex-direction: column;
-    margin: auto auto auto auto;
+
+
+@media (min-width:769px) {
+
+    .line,
+    .menu-icon,
+    .mobile-nav {
+        display: none;
+    }
+
+    .button-container,
+    .tablet-nav {
+        display: flex;
+    }
+
+    header div {
+        justify-content: center;
+    }
+
+    .tablet-nav {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 3rem 2rem 3rem;
+
+    }
+
+    .tablet-nav li {
+        color: var(--greyColor);
+        font-family: myAntonioFont;
+        font-size: 1.2rem;
+    }
+
+    section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 0;
+        margin-top: 3rem;
+    }
+
+    section .content {
+        text-align: start;
+        justify-content: start;
+        align-items: start;
+        width: 50%;
+        margin-top: 0;
+
+    }
+
+    section .content h1 {
+        font-size: 4rem;
+        text-align: left;
+        font-family: myAntonioFont;
+    }
+
+    section .content p {
+        line-height: 170%;
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-top: 4rem;
+        width: 40%;
+
+    }
+
+    .button-container button {
+        border: 1px solid white;
+        padding: 1rem;
+        display: flex;
+        background-color: transparent;
+    }
+
+    .button-container button span {
+        margin-right: 20px;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: #34344C;
+    }
+
+    .cards {
+        flex-direction: row;
+        flex-grow: 1;
+    }
+
+    .cards div {
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .cards div:not(:last-child) {
+        margin-right: 1rem;
+
+    }
+
+    .cards div p {
+        margin-top: 10px;
+    }
+
+}
+
+@media (min-width:1074px) {
+    .tablet-nav {
+        display: none;
+    }
+
+    .desktop-nav {
+        display: flex;
+        width: 30rem;
+        justify-content: space-between;
+    }
+
+    .desktop-nav li {
+        font-size: 0.7rem;
+    }
+
+    header div {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        padding: 0 5rem;
+        max-width: 87.5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content img {
+        margin-top: 12%;
+    }
+
+    section {
+        flex-direction: column;
+        margin-top: 0;
+        padding-right: 0;
+        padding-left: 10%;
+    }
+
+    section .content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+
+    }
+
+    .button-container {
+        width: 100%;
+        max-width: 30rem;
+        margin-top: 2rem;
+
+    }
+
+    .button-container button {
+        margin-top: 1rem;
+    }
+
+    #planet-image {
+        width: 25rem;
+    }
+
+    .cards {
+        padding: 3rem 5rem;
+        max-width: 74rem;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 87.5rem;
+    }
+
+    .cards div {
+        padding: 2rem;
+    }
+
+
 
 }
