@@ -1,14 +1,11 @@
-
-
-
 //Should Stay Global
 const paragraph = document.querySelector("section p");
-const link = document.querySelector("#wikipedia-link");
+const link = document.querySelector(".wikipedia-link a");
 const planetImage = document.querySelector("#planet-image");
 const geologyImage = document.querySelector("#geology")
 
 const overviewButton = document.querySelector('#overview_btn');
-const planets = document.querySelectorAll("li");
+// const planets = document.querySelectorAll("li");
 
 const getData = async () => {
     const response = await fetch('/assets/data.json');
@@ -27,12 +24,24 @@ getData().then(data => {
     const temperature = document.querySelector("#temperature");
     const heading = document.querySelector("h1");
 
+
     overviewButton.style.backgroundColor = "#419EBB";
 
+    const planetsDesktop = document.querySelector(".desktop-nav");
+    const planetsTablet = document.querySelector(".tablet-nav");
 
+    let planets;
+    if (window.getComputedStyle(planetsDesktop).display == 'flex') {
+        planets = document.querySelectorAll(".desktop-nav li");
+    }
+    else if (window.getComputedStyle(planetsTablet).display == 'flex') {
+        planets = document.querySelectorAll(".tablet-nav li");
+    }
 
+    else {
+        planets = document.querySelectorAll(".mobile-nav li");
+    }
 
-    const planets = document.querySelectorAll("li");
     for (let i = 0; i < planets.length; i++) {
 
         planets[i].addEventListener("click", function () {
@@ -46,6 +55,7 @@ getData().then(data => {
             heading.textContent = data[i].name;
             paragraph.textContent = data[i].overview.content;
             link.setAttribute("href", data[i].overview.source);
+
             planetImage.setAttribute("src", data[i].images.planet);
 
 

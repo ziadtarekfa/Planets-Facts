@@ -139,15 +139,8 @@ section p {
 
 
 #geology {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -40%;
-    height: 196px;
-    width: 163px;
     display: none;
-    /* visibility: none; */
 }
-
 
 
 @media (min-width:769px) {
