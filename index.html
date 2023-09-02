@@ -11,18 +11,15 @@
 
 <body>
     <header>
-
-
-
         <h3>The PLANETS</h3>
         <img class="menu-icon" src="assets/menu.svg" width="60px" onclick="toggleMenu()" />
+        <!-- <hr /> -->
 
-        <hr />
-        <ul class="planets-info">
-            <li>OVERVIEW</li>
-            <li>STRUCTURE</li>
-            <li>SURFACE</li>
-        </ul>
+        <!-- <ul class="planets-info">
+            <li class="overview">OVERVIEW</li>
+            <li class="structure">STRUCTURE</li>
+            <li class="geologyli">SURFACE</li>
+        </ul> -->
         <nav>
             <ul class="planets-nav">
                 <li id="mercury">MERCURY</li>
@@ -41,7 +38,7 @@
 
         <div class="image-container">
             <img id="planet-image" src="assets/images/planet-mercury.svg" alt="mercury photo" />
-            <img id="geology" src="assets/images/geology-mercury.png" />
+            <img class="geology-image" src="assets/images/geology-mercury.png" />
         </div>
 
         <section>
@@ -82,7 +79,7 @@
         </div>
     </div>
 
-    <script src="main.js"></script>
+    <script src="/js/main.js" type="module"></script>
 </body>
 
 </html>
