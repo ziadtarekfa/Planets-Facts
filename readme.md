@@ -3,7 +3,7 @@
 This website is a simple and informative resource for learning about various planets in our solar system. It is built using only **vanilla JavaScript and CSS**, making it lightweight and efficient. Additionally, the website is designed to be responsive, ensuring a great user experience on various devices and screen sizes.
 
 ## Live Demo
-https://product-preview-cardzt.netlify.app
+https://planetsfactszt.netlify.app/
 
 ## Features
 - **Planet Information:** The website provides detailed information about each of the eight planets in our solar system, including their names, images, and key characteristics such as rotation time, average temperature, and other unique facts.
