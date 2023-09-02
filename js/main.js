@@ -2,14 +2,19 @@ import {
     paragraph, link, planetImage,
     geologyImage, overviewButton, MenuModal,
     rotationTime, revolutionTime, radius,
-    temperature, heading, planets, structureButton, geologyButton
+    temperature, heading, planets, structureButton, geologyButton, menuIcon
 } from './variables.js';
 
 
 
-const toggleMenu = () => {
+
+export const toggleMenu = () => {
     MenuModal.classList.toggle('open');
 }
+
+
+menuIcon.addEventListener("click", toggleMenu);
+
 
 const fetchData = async () => {
     const response = await fetch('/assets/data.json');
@@ -18,7 +23,6 @@ const fetchData = async () => {
 }
 
 let planetindex = 0;
-
 
 fetchData().then(data => {
 

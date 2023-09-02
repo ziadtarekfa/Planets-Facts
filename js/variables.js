@@ -12,10 +12,10 @@ const heading = document.querySelector("h1");
 const planets = document.querySelectorAll(".planets-nav li");
 const structureButton = document.querySelector("#structure_btn");
 const geologyButton = document.querySelector("#geology_btn");
-
+const menuIcon = document.querySelector('.menu-icon');
 export {
     paragraph, link, planetImage, geologyImage,
     overviewButton, MenuModal, rotationTime,
     revolutionTime, radius, temperature, heading, planets,
-    structureButton, geologyButton
+    structureButton, geologyButton,menuIcon
 };

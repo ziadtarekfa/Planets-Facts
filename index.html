@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Title Changes Dynamically -->
@@ -9,10 +10,11 @@
 
 </head>
 
+
 <body>
     <header>
         <h3>The PLANETS</h3>
-        <img class="menu-icon" src="assets/menu.svg" width="60px" onclick="toggleMenu()" />
+        <img class="menu-icon" src="assets/menu.svg" width="60px" />
         <!-- <hr /> -->
 
         <!-- <ul class="planets-info">
@@ -80,6 +82,11 @@
     </div>
 
     <script src="/js/main.js" type="module"></script>
+
+    <script type="module">
+        import { toggleMenu } from "./js/main.js"; 
+    </script>
 </body>
+
 
 </html>
